@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css?family=Titillium+Web');
+@import 'index.css';
+@import 'index.tailwind.css';
+
+body {
+  font-size: 15px;
+  font-family: 'Titillium Web', sans-serif;
+}
+.main{
+  background-color: #000;
+}
+
+.search {
+  transition: .3s;
+  background-color: #000;
+  &:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 50px;
+    transition: .5s;
+    background: transparent;
+    z-index: -2;
+  }
+}
+
+.scrolled {
+  &:after {
+    bottom: -50px;
+    background: linear-gradient(
+                    to bottom,
+                    black,
+                    transparent
+    );
+  }
+}
